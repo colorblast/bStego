@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			bStego
+		</title>
+		<style>
+		    .center {
+		        text-align: center;
+		    }
+		</style>
+	</head>
+	<body>
+		<h1 class="center">bStego</h1>
+		<h2 class="center">steganography at your fingertips</h2>
+		<h3 class="center">Currently supported: PNG, JPG</h3>
+		<p>Why might you want to use steganography? Steganography is better than encryption since it
+		    does not easily indicate that data is easily being hidden; one is less to suspect your meme as holding valuable data over weirdly 
+		    looking text. A 2010 Russian spy ring is the most recent example I can think of that uses steganography. Steganography can also be used for the 
+		    protection of your private property, hiding copyright text within your image that you can use as evidence in a legal case when someone steals your 
+		    image.
+		</p>
+		<p><b>Encode</b></p>
+		<form method="POST" action="stego.py" enctype="multipart/form-data">
+		    File: <input type="file" name="file">
+		    Message: <input type="text" name="message" value="My secret message...">
+		    <button type="Submit">Encode</button>
+		</form>
+		<p><b>Decode</b></p>
+		<form method="POST" action="geary.py" enctype="multipart/form-data">
+		    File: <input type="file" name="file">
+		    <button type="Submit">Decode</button>
+		</form>
+	</body>
+</html>
